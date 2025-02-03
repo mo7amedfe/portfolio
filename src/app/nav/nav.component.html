@@ -1,0 +1,18 @@
+
+<div class="nav ">
+
+    <div class="info">
+        <h1 class="text-light">Mohamed Ahmed</h1>
+        <h4 class="text-light">Frontend Engineer</h4>
+        <p class="text-white-50">I build accessible, pixel-perfect digital experiences for the web.</p> 
+    </div>
+
+    <div class="navs">
+      <ul>
+        <li class="d-flex align-items-center list" [ngClass]="{'activated' :activeSection==item.name}" (click)="activate(item)" *ngFor="let item of items"><div class="line"></div>
+          <a [href]="'#' + item.name" class="link">{{item.name}}</a></li>
+      </ul>
+    </div>
+ 
+    
+</div>

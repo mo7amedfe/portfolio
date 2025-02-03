@@ -1,0 +1,33 @@
+ .duration{
+    color: rgba(95, 210, 212, 00.7);
+    transition: all 0.2s ease-in-out;
+    
+}
+
+
+.item-hover {
+    color: rgba(29, 29, 29, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+.item-hover .duration{
+    color: rgba(95, 210, 212, 0.1);
+    transition: all 0.2s ease-in-out;
+
+
+}
+.item{
+    color: rgb(210, 210, 210);
+    transition: all 0.2s ease-in-out;
+
+}
+
+.item:hover{
+    color: rgb(255, 255, 255);
+    padding:20px 0;
+
+}
+
+.item:hover .duration{
+    color: rgba(95, 210, 212);
+
+}

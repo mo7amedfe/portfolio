@@ -1,0 +1,23 @@
+p{
+    line-height: 3rem;
+    transition: all 0.2s ease-in-out;
+}
+
+p:hover{
+    color: white;
+    padding: 30px 10px;
+}
+p:hover  span{
+    color: rgba(95, 210, 212);
+
+
+}
+
+.item-hovered{
+    color: rgba(0, 0, 0, 0.3);
+}
+
+span{
+    color: rgba(95, 210, 212, 0.7);
+
+}

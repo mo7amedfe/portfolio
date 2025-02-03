@@ -1,0 +1,43 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<router-outlet />
+<div class="background">
+  <div class="spotlight" [ngStyle]="spotlightStyle"></div>
+
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 ">
+      <app-nav />
+    </div>
+    <div class="col-md-8 py-lg-5">
+      <div class="container-fluid text-light">
+     
+          <app-about id="ABOUT" />
+          <app-education id="Education" />
+          <app-skills id="Skills" />
+          <app-experience id="Experience" />
+          <app-projects id="Projects"/>
+
+      </div>
+
+    </div>
+  </div>
+</div>

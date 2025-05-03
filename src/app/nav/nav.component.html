@@ -1,0 +1,94 @@
+<!-- <div class="nav " id="nav">
+
+  <div class="info">
+    <h1 class="text-light">Mohamed Ahmed</h1>
+    <h4 class="text-light">Frontend Engineer</h4>
+    <p class="text-white-50">I build accessible, pixel-perfect digital experiences for the web.</p>
+  </div>
+
+  <div class="navs">
+    <ul>
+      <li class="d-flex align-items-center list" [ngClass]="{'activated' :activeSection==item.name}"
+        (click)="activate(item)" *ngFor="let item of items">
+        <div class="line"></div>
+        <a [href]="'#' + item.name" class="link">{{item.name}}</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="icons w-100 d-flex flex-wrap px-3 py-3">
+
+    <a href="https://www.linkedin.com/in/mohamed-ahmed-8074aa321/" target="_blank">
+      <div class="icon mx-2">
+        <i class="fa-brands fa-linkedin fa-xl"></i>
+      </div>
+    </a>
+
+    <a (click)="copyMail()">
+      <div class="icon mx-2">
+        <i class="fa-solid fa-envelope-open-text fa-xl"></i>
+      </div>
+    </a>
+
+  </div>
+
+</div>
+
+<div id="navs-sm" class=" container-fluid navs-sm position-fixed w-100">
+
+  <div class="row position-relative w-100">
+    <div class="container-fluid ">
+      <h2 id="activated-sm " class="activated-sm position-absolute "
+        [ngClass]="{'left-auto': activeSection == item.name  }"
+        *ngFor="let item of items">{{item.name}}</h2>
+    </div>
+
+  </div>
+
+
+
+</div> -->
+
+<div class="nav" id="nav">
+  <div class="info">
+    <h1 class="text-light">Mohamed Ahmed</h1>
+    <h4 class="text-light">Frontend Engineer</h4>
+    <p class="text-white-50">I build accessible, pixel-perfect digital experiences for the web.</p>
+  </div>
+
+  <div class="navs">
+    <ul>
+      <li class="d-flex align-items-center list" [ngClass]="{'activated': activeSection === item.name}"
+        (click)="activate(item)" *ngFor="let item of items">
+        <div class="line"></div>
+        <a [href]="'#' + item.name" class="link">{{item.name}}</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="icons w-100 d-flex flex-wrap px-3 py-3">
+    <a href="https://www.linkedin.com/in/mohamed-ahmed-8074aa321/" target="_blank">
+      <div class="icon mx-2">
+        <i class="fa-brands fa-linkedin fa-xl"></i>
+      </div>
+    </a>
+    <a (click)="copyMail()">
+      <div class="icon mx-2">
+        <i class="fa-solid fa-envelope-open-text fa-xl"></i>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div id="navs-sm" class="container-fluid navs-sm position-fixed w-100"
+  [ngClass]="{'show': activeSection !== 'ABOUT', 'hide': activeSection === 'ABOUT'}">
+  <div class="row position-relative w-100">
+    <div class="container-fluid">
+       <h2 id="activated-sm" class="activated-sm position-absolute"
+        [ngClass]="{'left-auto': activeSection === item.name}" *ngFor="let item of items">
+        {{activeSection}}
+      </h2> 
+
+    </div>
+  </div>
+</div>

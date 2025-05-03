@@ -1,0 +1,78 @@
+.icon {
+    color: white;
+    transition: color 0.2s ease-in-out;
+}
+
+.title {
+    transition: color 0.2s ease-in-out;
+    padding-bottom: 0;
+    margin-bottom: 1%;
+}
+.image{
+    filter: none;
+    transition: filter 0.2s ease-in-out;
+}
+.margin1{
+    margin-top:2%;
+}
+.skill{
+    height: 100px;
+    transition: all 0.2s ease-in-out;
+}
+.skill:hover{
+    box-shadow: 1px 1px 10px 1px rgba(47, 47, 47, 0.268);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 60px;
+}
+.icon{
+    transition: top 0.2s ease-in-out;
+}
+.skill:hover .icon{
+    top: 10px !important;
+}
+.skill:hover i {
+    color: #5fd2d4;
+
+}
+
+.skill:hover .title {
+    color: #ffffff;
+}
+
+.skill:hover #mySVG path {
+    fill: #5fd2d4;
+}
+#mySVG path {
+    fill:white;
+    transition: fill 0.2s ease-in-out;
+}
+  
+.skill:hover #mySVG2 path {
+    fill: #5fd2d4;
+}
+#mySVG2 path {
+    fill:white;
+    transition: fill 0.2s ease-in-out;
+}
+
+.skill-hovered i{
+color: rgba(0, 0, 0, 0.2) ;
+}
+  .skill-hovered p{
+color: rgba(0, 0, 0, 0.2) ;
+
+  }
+  .skill-hovered #mySVG path{
+    fill: rgba(0, 0, 0, 0.2);
+
+  }
+
+  .skill-hovered #mySVG2 path{
+    fill: rgba(0, 0, 0, 0.2);
+
+  }
+  @media (max-width:768px)and (min-width:0) {
+    .col-md-1{
+        width: 21%;
+    }
+}

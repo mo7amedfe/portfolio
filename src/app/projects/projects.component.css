@@ -20,6 +20,15 @@ span {
     transition: all 0.2s ease-in-out;
 }
 
+.src-code {
+    color: #0e48d0;
+    background-color: #0e48d04e;
+    border-color: transparent !important;
+    font-size: 14px;
+    margin-right: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
 .item {
     padding: 3px;
     border: 2px solid transparent;
@@ -49,9 +58,6 @@ span {
 
 
 }
-
-
-
 
 .item:hover h5 {
     color: #5fd2d4 !important;

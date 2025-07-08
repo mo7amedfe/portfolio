@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/portfolio",
+            "outputPath": "dist/portfolio/browser",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -35,9 +35,7 @@
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
               "node_modules/@popperjs/core/dist/umd/popper.min.js"
-            ],
-            "baseHref": "/portfolio/",
-            "deployUrl": "/portfolio/"
+            ]
           },
           "configurations": {
             "production": {
@@ -53,12 +51,16 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "./",
+              "deployUrl": "./"
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "baseHref": "./",
+              "deployUrl": "./"
             }
           },
           "defaultConfiguration": "production"

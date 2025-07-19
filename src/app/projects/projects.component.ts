@@ -49,7 +49,8 @@ export class ProjectsComponent {
       developed_at: '2025',
       project_title: 'Courses Platform',
       description:
-        'An educational web platform designed to provide structured learning experiences through online courses. In addition to leading development, I designed the entire application structure and database schema from scratch, ensuring scalability, clarity, and efficient data flow. As the main frontend developer, I built the full UI using Angular 19, including dynamic components such as course lists, lesson pages, a final test module, user dashboards, and admin panels. The platform features authentication, cart functionality, enrolled courses, assignment submissions, and instructor review systems. It is fully responsive, performance-optimized, and architected with a modular and scalable frontend structure.',
+        `An educational web platform designed to provide structured learning experiences through online courses. In addition to leading development, I designed the entire application structure and database schema from scratch, ensuring scalability, clarity, and efficient data flow. As the main frontend developer, I built the full UI using Angular 19, including dynamic components such as course lists, lesson pages, a final test module, user dashboards, and admin panels. The platform features authentication, cart functionality, enrolled courses, assignment submissions, and instructor review systems. It is fully responsive, performance-optimized, and architected with a modular and scalable frontend structure.
+        for login as admin mail:admin@gmail.com password:@Mm123456 for login as instructor mail:ins@gmail.com password:@Mm123456 for login as student you can register or by this credintial mail:std@gmail.com pass:@Mm12345`,
       project_technologies: [
         'Angular',
         'TypeScript',

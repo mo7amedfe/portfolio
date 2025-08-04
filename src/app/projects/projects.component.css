@@ -10,7 +10,9 @@ span {
 }
 
 
-
+.proj-duration{
+    color: #5fd2d4;
+}
 .tech {
     color: #5fd2d4;
     background-color: #5fd2d44e;

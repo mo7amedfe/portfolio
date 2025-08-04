@@ -1,3 +1,8 @@
+/*IMPORTANT
+ default class is item ,when an item be hovered the style in item:hover
+ and another items styles in item-hover class
+  */
+
 h5 {
     font-weight: 450 !important;
     color: rgba(255, 255, 255, 0.892);
@@ -7,12 +12,17 @@ h5 {
 span {
     color: #94a3b8;
     transition: all 0.2s ease-in-out;
+
 }
 
+.line{
+    height: 1px;
+    width: 100%;
+    background-color: #5fd2d44e;
+    transition: all 0.2s ease-in-out;
 
-.proj-duration{
-    color: #5fd2d4;
 }
+
 .tech {
     color: #5fd2d4;
     background-color: #5fd2d44e;
@@ -65,14 +75,20 @@ span {
     color: #5fd2d4 !important;
 
 }
+.item:hover .line {
+    background-color: #5fd2d4 !important;
+
+}
 
 .item:hover .tech {
     background-color: #5fd2d44e;
     color: #5fd2d4;
-
-
-
 }
+.item:hover .src-code {
+    color: #0e48d0;
+    background-color: #0e48d04e;
+}
+
 .item:hover img{
     filter: brightness(1);
     }
@@ -84,6 +100,9 @@ span {
 .item-hover span {
     color: rgba(255, 255, 255, 0.2);
 
+}
+.item-hover .line {
+    background-color: rgba(95, 210, 212, 0.1);
 }
 
 .item-hover h5 {
@@ -97,6 +116,12 @@ filter: brightness(0.25);
 .item-hover .tech {
     background-color: rgba(95, 210, 212, 0.1);
     color: rgba(95, 210, 212, 0.1);
+
+
+}
+.item-hover .src-code {
+    color: rgba(14, 72, 208,0.1);
+    background-color: rgba(14, 72, 208, 0.1);
 
 
 }

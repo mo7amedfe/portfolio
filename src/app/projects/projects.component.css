@@ -14,7 +14,10 @@ span {
     transition: all 0.2s ease-in-out;
 
 }
+p{
+    transition: all 0.2s ease-in-out;
 
+}
 .line{
     height: 1px;
     width: 100%;
@@ -80,6 +83,7 @@ span {
 
 }
 
+
 .item:hover .tech {
     background-color: #5fd2d44e;
     color: #5fd2d4;
@@ -98,7 +102,8 @@ span {
 }
 
 .item-hover span {
-    color: rgba(255, 255, 255, 0.2);
+    color: rgba(148, 163, 184,0.1) ;
+
 
 }
 .item-hover .line {
@@ -106,7 +111,7 @@ span {
 }
 
 .item-hover h5 {
-    color: rgba(255, 255, 255, 0.4)!important;
+    color: rgba(255, 255, 255, 0.1)!important;
 
 }
 .item-hover img{
@@ -130,12 +135,12 @@ filter: brightness(0.25);
     color: rgba(148, 163, 184,0.1) !important;
 
 }
-.item:hover span,p {
-    color: #94a3b8  ;
+.item:hover span {
+    color: #ffffff  ;
 
 }
 .item:hover p {
-    color: #94a3b8 !important;
+    color: #ffffff !important;
 
 }
 @media (max-width:1249px) and (min-width:0) {

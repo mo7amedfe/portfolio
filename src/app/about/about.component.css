@@ -16,7 +16,10 @@ p:hover  span{
 .item-hovered{
     color: rgba(0, 0, 0, 0.3);
 }
+.item-hovered span{
+    color: rgba(95, 210, 212, 0.3);
 
+}
 span{
     color: rgba(95, 210, 212, 0.7);
 

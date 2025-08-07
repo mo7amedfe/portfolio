@@ -17,6 +17,7 @@
   </div>
 
   <div class="icons w-100 d-flex flex-wrap px-3 py-3">
+    
     <a href="https://www.linkedin.com/in/mohamed-ahmed-8074aa321/" target="_blank">
       <div class="icon mx-2">
         <i class="fa-brands fa-linkedin fa-xl"></i>
@@ -25,6 +26,11 @@
     <a (click)="copyMail()">
       <div class="icon mx-2">
         <i class="fa-solid fa-envelope-open-text fa-xl"></i>
+      </div>
+    </a>
+    <a href="https://github.com/mo7amedfe" target="_blank">
+      <div class="icon mx-2">
+        <i class="fa-brands fa-github fa-xl"></i>
       </div>
     </a>
   </div>
@@ -42,6 +48,8 @@
   </div>
 </div>
 
-<div *ngIf="notificationVisible" class="notification">
-  {{ notificationMessage }}
+<div [ngClass]="{'visible':notificationVisible}" class="notification-container">
+  <div class="notification">
+    <span>Copied:</span> mohamed2233631&#64;gmail.com
+  </div>
 </div>

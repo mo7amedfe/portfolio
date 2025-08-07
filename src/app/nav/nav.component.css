@@ -129,22 +129,36 @@ i {
         -webkit-transition: left 0.4s ease-in-out;
     }
 }
+.notification-container{
+    width: 100% !important;
+    position: fixed;
+    top: -80px;
+    left: 0;
+    right: 0;
+   display: flex;
+   justify-content: center;
+   transition: top 0.3s ease-in-out;
+  z-index: 1000;
+
+}
 
 .notification {
-  position: fixed;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #222;
+
+  background-color:rgba(15, 23, 42, 0.945);
   color: #fff;
   padding: 12px 32px;
   border-radius: 8px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.15);
   font-size: 1rem;
-  z-index: 1000;
   opacity: 0.95;
   transition: opacity 0.3s ease, top 0.3s ease;
   pointer-events: none;
+}
+.notification span{
+    color: rgba(95, 210, 212);
+}
+.visible{
+    top: 30px !important;
 }
 
 .notification.ng-animating {

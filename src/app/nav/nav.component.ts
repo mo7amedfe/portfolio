@@ -18,7 +18,6 @@ export class NavComponent {
   activeSection: string = 'ABOUT';
 
   notificationVisible = false;
-  notificationMessage = '';
   notificationTimeout: any;
 
   activate(item: any) {
@@ -60,15 +59,13 @@ export class NavComponent {
   }
 
   copyMail() {
-    navigator.clipboard.writeText('mohamed2233631@gmail.com').then(() => {
-      this.notificationMessage = 'Copied: mohamed2233631@gmail.com';
+    navigator.clipboard.writeText('mohamed2233631@gmail.com')
+      
       this.notificationVisible = true;
-      if (this.notificationTimeout) {
-        clearTimeout(this.notificationTimeout);
-      }
-      this.notificationTimeout = setTimeout(() => {
-        this.notificationVisible = false;
-      }, 3000);
-    });
+ 
+    setTimeout(() => {
+      this.notificationVisible = false;
+      
+    }, 3000);
   }
 }

@@ -1,13 +1,31 @@
+::selection {
+    background-color: #5fd2d495;
+    color: #ffffff;
+  }
+  h5::selection{
+    color: #000;
+
+  }
+  .tech::selection{
+    color: #000;
+    
+
+  }
+p{
+    margin-left: 4px;
+    transition: all 0.2s ease-in-out;
+}
+span {
+    color: #94a3b8;
+    transition: all 0.2s ease-in-out;
+}
+
 h5 {
     font-weight: 450 !important;
     color: rgba(255, 255, 255, 0.892);
     transition: color 0.2s ease-in-out;
 }
 
-span {
-    color: #94a3b8;
-    transition: all 0.2s ease-in-out;
-}
 
 
 .tech {
@@ -51,6 +69,17 @@ span {
 
 }
 
+.item:hover span{
+    margin-left: 10px !important;
+
+    color: #ffffff !important;
+
+}
+.item:hover p {
+    color: #ffffff !important;
+
+}
+
 .item:hover .tech {
     background-color: #5fd2d44e;
     color: #5fd2d4;
@@ -82,16 +111,11 @@ span {
 
 .item-hover p{
     color: rgba(148, 163, 184,0.1) !important;
+    margin-left: 8px;
 
 }
-.item:hover span,p {
-    color: #94a3b8  ;
 
-}
-.item:hover p {
-    color: #94a3b8 !important;
 
-}
 
 .resumeLink{
     font-size: large;

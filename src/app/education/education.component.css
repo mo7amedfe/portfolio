@@ -4,7 +4,14 @@
 
  }
 
+h4{
+    transition: all 0.2s ease-in-out;
 
+}
+i{
+    transition: all 0.2s ease-in-out;
+
+}
  .item-hover {
      color: rgba(29, 29, 29, 0.1);
      transition: all 0.2s ease-in-out;
@@ -15,6 +22,14 @@
      transition: all 0.2s ease-in-out;
 
 
+ }
+ .item-hover i {
+    color: rgba(148, 163, 184,0.1) ;
+    
+ }
+ .item-hover h4 {
+    color: rgba(148, 163, 184,0.1) ;
+    
  }
 
  .item {
@@ -33,6 +48,14 @@
      color: rgba(95, 210, 212);
 
  }
+ .item:hover i {
+    color: rgba(95, 210, 212);
+
+}
+.item:hover h4 {
+    color: rgb(255, 255, 255);
+
+}
 
  @media (max-width:1023px)and (min-width:0) {
      .item i {

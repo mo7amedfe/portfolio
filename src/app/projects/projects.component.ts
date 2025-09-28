@@ -56,6 +56,7 @@ export class ProjectsComponent {
         'TypeScript',
         'Tailwind CSS',
         'NodeJS',
+'ExpressJS',
         'MongoDB',
       ],
     },

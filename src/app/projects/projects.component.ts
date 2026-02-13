@@ -12,7 +12,7 @@ export class ProjectsComponent {
     {
       source_code: 'https://github.com/mohamedsalah-2003/myEcommerce',
       imgSrc: 'assets/images/img.png',
-      Link: 'https://mo7amedfe.github.io/myEcommerce/',
+      Link: 'https://mohamedsalah-2003.github.io/myEcommerce/',
       developed_at: '2023',
       project_title: 'FreshCart',
       description:
@@ -28,7 +28,7 @@ export class ProjectsComponent {
     {
       source_code: 'https://github.com/mohamedsalah-2003/Realstate',
       imgSrc: 'assets/images/download.png',
-      Link: 'https://mo7amedfe.github.io/Realstate',
+      Link: 'https://mohamedsalah-2003.github.io/Realstate',
       developed_at: '2024 - current',
       project_title: 'Realstate (BETA)',
       description:

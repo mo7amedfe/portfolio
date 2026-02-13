@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class ProjectsComponent {
   items = [
     {
-      source_code: 'https://github.com/mo7amedfe/myEcommerce',
+      source_code: 'https://github.com/mohamedsalah-2003/myEcommerce',
       imgSrc: 'assets/images/img.png',
       Link: 'https://mo7amedfe.github.io/myEcommerce/',
       developed_at: '2023',
@@ -26,7 +26,7 @@ export class ProjectsComponent {
       ],
     },
     {
-      source_code: 'https://github.com/mo7amedfe/Realstate',
+      source_code: 'https://github.com/mohamedsalah-2003/Realstate',
       imgSrc: 'assets/images/download.png',
       Link: 'https://mo7amedfe.github.io/Realstate',
       developed_at: '2024 - current',
@@ -45,7 +45,7 @@ export class ProjectsComponent {
     {
       imgSrc: 'assets/images/Screenshot 2025-07-03 164804.png',
       Link: 'https://education-platform-omega.vercel.app',
-      source_code: 'https://github.com/mo7amedfe/EducationPlatform',
+      source_code: 'https://github.com/mohamedsalah-2003/EducationPlatform',
       developed_at: '2025',
       project_title: 'Courses Platform',
       description:

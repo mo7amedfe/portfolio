@@ -51,6 +51,8 @@ p {
     display: none;
 }
 
+/* Mobile bar visuals live in nav.component.css (liquid glass). */
+
 ::selection {
     background-color: #5fd2d495;
     color: #ffffff;
@@ -60,12 +62,3 @@ p {
 
   }
  
-@media (max-width: 767px) and (min-width: 0) {
-    .navs-sm {
-        display: block;
-        background-color: #0f172aeb;
-        color: white;
-        padding: 15px 0;
-        z-index: 20;
-    }
-}

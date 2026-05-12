@@ -90,14 +90,25 @@ i {
  * Liquid glass: no painted color gradients — flat translucent neutrals + backdrop-filter.
  * Hue comes from whatever scrolls behind; fill is only enough opacity to read text.
  */
-.navs-sm--water-drop {
-  --drop-blur: 48px;
-  --drop-sat: 1.4;
-  --drop-shell: rgba(255, 255, 255, 0.09);
-  --drop-fill: rgba(15, 23, 42, 0.22);
-}
+/* .navs-sm--water-drop {
+  --drop-blur: 68px;
+  --drop-sat: 1.22;
+  --drop-shell: rgba(255, 255, 255, 0.11);
+  --drop-fill: rgba(15, 23, 42, 0.3);
+  
+} */
+/* .navs-sm--water-drop {
+  --drop-blur: 80px;
+  --drop-sat: 1.8;
 
-.navs-sm__glass {
+  /* outer reflective shell */
+  /* --drop-shell: rgba(255, 255, 255, 0.01); */
+
+  /* inner translucent liquid */
+  /* --drop-fill: rgba(255, 255, 255, 0.15); */
+/* } */
+
+/* .navs-sm__glass {
   position: relative;
   overflow: hidden;
   isolation: isolate;
@@ -118,10 +129,10 @@ i {
   background: var(--drop-shell);
   filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.38)) drop-shadow(0 3px 10px rgba(15, 23, 42, 0.28));
   /* Single rim: inner handles border + top lip; avoid double line at top */
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.12);
-}
+  /* box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.12); */
+/* } */
 
-.navs-sm__glass-inner {
+/* .navs-sm__glass-inner {
   position: relative;
   border-radius: 22px;
   padding: 15px 22px 17px;
@@ -131,6 +142,125 @@ i {
   -webkit-backdrop-filter: blur(var(--drop-blur)) saturate(var(--drop-sat)) brightness(1.02);
   border: 1px solid rgba(255, 255, 255, 0.16);
   box-shadow: inset 0 -12px 24px rgba(0, 0, 0, 0.18);
+} */ */
+
+.navs-sm--water-drop {
+  --drop-blur: 24px;
+  --drop-sat: 1.45;
+
+  --drop-shell: rgba(255,255,255,0.08);
+  --drop-fill: rgba(255,255,255,0.06);
+}
+
+.navs-sm__glass {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+
+  border-radius: 30px;
+
+  padding: 1.5px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.28) 0%,
+      rgba(255,255,255,0.08) 18%,
+      rgba(255,255,255,0.03) 100%
+    );
+
+  box-shadow:
+    0 8px 30px rgba(0,0,0,0.28),
+    0 2px 10px rgba(255,255,255,0.04),
+    inset 0 1px 0 rgba(255,255,255,0.3);
+
+  backdrop-filter:
+    blur(10px);
+
+  -webkit-backdrop-filter:
+    blur(10px);
+
+  opacity: 0;
+  transform: translateY(-14px) scale(0.96);
+
+  transition:
+    opacity .45s cubic-bezier(.32,.72,0,1),
+    transform .55s cubic-bezier(.32,.72,0,1);
+}
+
+.navs-sm__glass-inner {
+  position: relative;
+
+  border-radius: 28px;
+
+  padding: 15px 22px 17px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.12),
+      rgba(255,255,255,0.03)
+    );
+
+  backdrop-filter:
+    blur(var(--drop-blur))
+    saturate(var(--drop-sat));
+
+  -webkit-backdrop-filter:
+    blur(var(--drop-blur))
+    saturate(var(--drop-sat));
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.18),
+    inset 0 -12px 24px rgba(0,0,0,0.16);
+}
+.navs-sm__glass::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.35) 0%,
+      rgba(255,255,255,0.12) 10%,
+      transparent 32%
+    );
+
+  opacity: .9;
+
+  pointer-events: none;
+}
+.navs-sm__glass::after {
+  content: "";
+
+  position: absolute;
+
+  left: 10%;
+  right: 10%;
+  bottom: -30px;
+
+  height: 60px;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(120,180,255,0.16),
+      transparent 70%
+    );
+
+  filter: blur(18px);
+
+  pointer-events: none;
 }
 
 .navs-sm__hint {
@@ -155,6 +285,7 @@ i {
 
 .navs-sm__title {
   margin: 0;
+  text-align: center  ;
   font-size: 1.15rem;
   font-weight: 600;
   letter-spacing: -0.02em;

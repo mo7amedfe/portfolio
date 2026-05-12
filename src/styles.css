@@ -1,18 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 
-body {
-    font-family: monospace !important;
-
+/* Same color as .background — avoids white flash on mobile overscroll. */
+html {
+    background-color: rgb(15, 23, 42);
 }
 
+body {
+    font-family: monospace !important;
+    background-color: rgb(15, 23, 42);
+    min-height: 100vh;
+    min-height: 100dvh;
+}
 
 .background {
-    background-color: rgba(15, 23, 42);
+    background-color: rgb(15, 23, 42);
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    min-height: -webkit-fill-available;
     z-index: -5;
 }
 

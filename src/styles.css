@@ -1,31 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
 
-body {
-    font-family: monospace !important;
-
+/* Same color as .background — avoids white flash on mobile overscroll. */
+html {
+    background-color: rgb(15, 23, 42);
 }
 
+body {
+    font-family: monospace !important;
+    background-color: rgb(15, 23, 42);
+    min-height: 100vh;
+    min-height: 100dvh;
+}
 
 .background {
-    background-color: rgba(15, 23, 42);
+    background-color: rgb(15, 23, 42);
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -5;
+    inset: 0;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    min-height: -webkit-fill-available;
+    z-index: 0;
 }
 
 .spotlight {
     position: absolute;
     width: 800px;
     height: 800px;
+    max-width: min(800px, 200vw);
+    max-height: min(800px, 200vh);
     background: rgb(17, 32, 68);
     background: radial-gradient(circle, rgba(23, 47, 101, 0.7) 0%, rgba(15, 23, 42, 1) 60%);
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    z-index: -4;
+    z-index: 1;
+}
+
+@media (max-width: 767px) {
+    .spotlight {
+        display: none !important;
+    }
 }
 
 p {
@@ -36,6 +51,8 @@ p {
     display: none;
 }
 
+/* Mobile bar visuals live in nav.component.css (liquid glass). */
+
 ::selection {
     background-color: #5fd2d495;
     color: #ffffff;
@@ -45,13 +62,3 @@ p {
 
   }
  
-@media (max-width: 767px) and (min-width: 0) {
-    .navs-sm {
-        display: block;
-        background-color: #0f172aeb;
-        color: white;
-        padding: 15px 0;
-        z-index: 20;
-   
-    }
-}

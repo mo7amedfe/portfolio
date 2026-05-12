@@ -35,7 +35,7 @@
     }
 }
 
-@media (max-width:768px)and (min-width:0) {
+@media (max-width: 768px) and (min-width: 0) {
     .col-md-4 {
         position: static;
         height: auto;
@@ -43,10 +43,6 @@
         left: auto;
         bottom: auto;
         padding: 0 0;
-    }
-
-    .spotlight {
-        display: none;
     }
 
 }

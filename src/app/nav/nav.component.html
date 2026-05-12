@@ -42,14 +42,19 @@
   </div>
 </div>
 
-<div id="navs-sm" class="container-fluid navs-sm position-fixed w-100"
-  [ngClass]="{'show': activeSection !== 'ABOUT', 'hide': activeSection === 'ABOUT'}">
-  <div class="row position-relative w-100">
-    <div class="container-fluid">
-      <h2 id="activated-sm" class="activated-sm position-absolute"
-        [ngClass]="{'left-auto': activeSection === item.name}" *ngFor="let item of items">
-        {{activeSection}}
-      </h2>
+<div
+  id="navs-sm"
+  class="navs-sm navs-sm--glass-bar navs-sm--water-drop position-fixed w-100"
+  [ngClass]="{ show: activeSection !== 'ABOUT', hide: activeSection === 'ABOUT' }"
+>
+  <div class="navs-sm__safe">
+    <div class="navs-sm__glass">
+      <div class="navs-sm__glass-inner">
+        <!--<span class="navs-sm__hint">Current</span>-->
+        <div class="navs-sm__title-clip">
+          <h2 class="navs-sm__title" [@sectionTitle]="titleMotionState">{{ activeSection }}</h2>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -20,19 +20,27 @@ body {
     min-height: 100vh;
     min-height: 100dvh;
     min-height: -webkit-fill-available;
-    z-index: -5;
+    z-index: 0;
 }
 
 .spotlight {
     position: absolute;
     width: 800px;
     height: 800px;
+    max-width: min(800px, 200vw);
+    max-height: min(800px, 200vh);
     background: rgb(17, 32, 68);
     background: radial-gradient(circle, rgba(23, 47, 101, 0.7) 0%, rgba(15, 23, 42, 1) 60%);
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    z-index: -4;
+    z-index: 1;
+}
+
+@media (max-width: 767px) {
+    .spotlight {
+        display: none !important;
+    }
 }
 
 p {
@@ -59,6 +67,5 @@ p {
         color: white;
         padding: 15px 0;
         z-index: 20;
-   
     }
 }

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -28,16 +28,23 @@ export class NavComponent {
 
   @HostListener('window:scroll', [])
   onScroll() {
-    const scrollPosition =window.pageYOffset ||document.documentElement.scrollTop ||document.body.scrollTop;
+    const scrollPosition =
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop;
     const navSm = document.getElementById('navs-sm');
 
-    for (let item of this.items) {
+    for (const item of this.items) {
       const sectionElement = document.getElementById(item.name);
       if (sectionElement) {
-        const sectionTop =sectionElement.getBoundingClientRect().top + window.scrollY;
+        const sectionTop =
+          sectionElement.getBoundingClientRect().top + window.scrollY;
         const sectionHeight = sectionElement.offsetHeight;
 
-        if (scrollPosition >= sectionTop - 50 && scrollPosition < sectionTop + sectionHeight - 50) {
+        if (
+          scrollPosition >= sectionTop - 50 &&
+          scrollPosition < sectionTop + sectionHeight - 50
+        ) {
           this.activeSection = item.name;
 
           if (navSm) {

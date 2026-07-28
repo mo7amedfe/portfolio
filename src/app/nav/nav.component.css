@@ -155,26 +155,8 @@ h2 {
   transform: translateY(-2px);
 }
 
-.social-links .youtube-link {
-  border-color: rgba(255, 0, 51, 0.35);
-  background: rgba(255, 0, 51, 0.08);
-}
-
 .youtube-link i {
-  color: #ff0033;
   font-size: 1.15rem;
-  transition: color 180ms ease, transform 180ms ease;
-}
-
-.social-links .youtube-link:hover {
-  border-color: #ff0033;
-  background: #ff0033;
-  box-shadow: 0 8px 22px rgba(255, 0, 51, 0.24);
-}
-
-.social-links .youtube-link:hover i {
-  color: #fff;
-  transform: scale(1.08);
 }
 
 .mobile-section-indicator {

@@ -28,6 +28,12 @@
   transform: translateY(-3px);
 }
 
+.experience-content {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
 .experience-date,
 .context {
   margin: 0;
@@ -40,11 +46,15 @@
 }
 
 .experience-date {
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.3rem;
+}
+
+.context {
+  margin-bottom: 0.45rem;
 }
 
 h3 {
-  margin: 0.25rem 0 0.8rem;
+  margin: 0 0 0.8rem;
   color: var(--text);
   font-size: 1.15rem;
   transition: color 180ms ease;
@@ -113,9 +123,6 @@ li::marker {
     padding: 1.2rem;
   }
 
-  .experience-date {
-    margin-bottom: 0.7rem;
-  }
 }
 
 @media (hover: none) {

@@ -3,9 +3,8 @@
 
   <div class="experience-list">
     <article class="experience-card" *ngFor="let item of items">
-      <div class="experience-date">{{item.duration}}</div>
-
-      <div>
+      <div class="experience-content">
+        <div class="experience-date">{{item.duration}}</div>
         <p class="context">{{item.context}}</p>
         <h3>{{item.job_title}}</h3>
 

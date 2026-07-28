@@ -4,9 +4,7 @@
 }
 
 .experience-card {
-  display: grid;
-  grid-template-columns: 9rem 1fr;
-  gap: 1.25rem;
+  display: block;
   padding: 1.4rem;
   border: 1px solid var(--border);
   border-radius: 1rem;
@@ -39,6 +37,10 @@
   font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+
+.experience-date {
+  margin-bottom: 0.35rem;
 }
 
 h3 {
@@ -108,7 +110,6 @@ li::marker {
 
 @media (max-width: 540px) {
   .experience-card {
-    display: block;
     padding: 1.2rem;
   }
 

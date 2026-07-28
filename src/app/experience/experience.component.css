@@ -1,3 +1,8 @@
+.experience-list {
+  display: grid;
+  gap: 1.25rem;
+}
+
 .experience-card {
   display: grid;
   grid-template-columns: 9rem 1fr;
@@ -10,7 +15,12 @@
     border-color 180ms ease,
     background-color 180ms ease,
     box-shadow 180ms ease,
+    opacity 180ms ease,
     transform 180ms ease;
+}
+
+.experience-list:hover .experience-card:not(:hover) {
+  opacity: 0.26;
 }
 
 .experience-card:hover {
@@ -104,5 +114,11 @@ li::marker {
 
   .experience-date {
     margin-bottom: 0.7rem;
+  }
+}
+
+@media (hover: none) {
+  .experience-list:hover .experience-card:not(:hover) {
+    opacity: 1;
   }
 }

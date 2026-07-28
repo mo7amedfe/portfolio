@@ -11,11 +11,15 @@
   gap: 1rem;
   padding: 1.4rem;
   border-bottom: 1px solid var(--border);
-  transition: background-color 180ms ease, transform 180ms ease;
+  transition: background-color 180ms ease, opacity 180ms ease, transform 180ms ease;
 }
 
 .education-item:last-child {
   border-bottom: 0;
+}
+
+.education-list:hover .education-item:not(:hover) {
+  opacity: 0.26;
 }
 
 .education-item:hover {
@@ -81,5 +85,11 @@ p {
   .education-heading span {
     display: inline-block;
     margin-top: 0.35rem;
+  }
+}
+
+@media (hover: none) {
+  .education-list:hover .education-item:not(:hover) {
+    opacity: 1;
   }
 }

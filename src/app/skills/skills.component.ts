@@ -8,21 +8,31 @@ import { Component } from '@angular/core';
   styleUrl: './skills.component.css'
 })
 export class SkillsComponent {
-
   skills = [
-    { "icon": "fa-brands fa-angular", "title": "Angular" },
-    { "icon": "fa-brands fa-react", "title": "React" },
-    { "icon": "fa-brands fa-node", "title": "NodeJS" },
-    { "icon": "fa-brands fa-js", "title": "JS" },
-    { "imgSvg": '', "title": "MongoDB" },
-    { "imgSrc": "", "title": "ExpressJS" },
-    { "icon": "fa-brands fa-java", "title": "JAVA" }
+    { icon: 'fa-brands fa-angular', title: 'Angular' },
+    { icon: 'fa-brands fa-react', title: 'React' },
+    { icon: 'fa-brands fa-react', title: 'React Native' },
+    { icon: 'fa-brands fa-node-js', title: 'Node.js' },
+    { icon: 'fa-brands fa-js', title: 'TypeScript' },
+    { kind: 'mongodb', title: 'MongoDB' },
+    { kind: 'express', title: 'Express.js' },
+    { icon: 'fa-brands fa-java', title: 'Java' },
+    { icon: 'fa-brands fa-python', title: 'Python' },
+    { icon: 'fa-brands fa-git-alt', title: 'Git' }
   ];
-isHovered=false;
-  hover(){
-this.isHovered=true
-  }
-  unhover(){
-    this.isHovered=false
-      }
+
+  supportingSkills = [
+    'JavaScript',
+    'C++',
+    'HTML & CSS',
+    'SCSS',
+    'Bootstrap',
+    'Tailwind CSS',
+    'jQuery',
+    'Oracle',
+    'REST APIs',
+    'OOP',
+    'MVC',
+    'Design Patterns'
+  ];
 }

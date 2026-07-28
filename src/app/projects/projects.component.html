@@ -1,32 +1,45 @@
-<section id="Projects" class="">
-    <a *ngFor="let item of items" [href]="item.Link" target="_blank" class="text-decoration-none w-100">
+<section id="Projects" aria-labelledby="projects-title">
+  <h2 id="projects-title" class="section-kicker">Projects</h2>
 
-        <div (mouseenter)="hover()" (mouseleave)="leave()" [ngClass]="{'item-hover':isHovered}"
-            class="d-flex flex-wrap item w-100 rounded-3">
+  <div class="projects-list">
+    <article *ngFor="let item of items" class="project-card" [class.featured]="item.featured">
+      <div class="project-media">
+        <img *ngIf="item.imgSrc" [src]="item.imgSrc" [alt]="item.project_title + ' interface preview'" loading="lazy"
+          width="560" height="360">
 
-            <div class="col-md-3 p-3">
-
-                <img class="w-100 rounded-3" [src]="item.imgSrc">
-            </div>
-
-            <div class="d-flex flex-wrap justify-content-between col-md-9 p-1">
-                <h5 class="">{{item.project_title}} </h5>
-                <div class="span-container"><span class=""> developed at {{item.developed_at}}</span>
-                    <div class="line"></div>
-                </div>
-                <p class="">{{item.description}}</p>
-                <div class="d-flex flex-wrap p-1">
-                    <div class="rounded-pill border px-1 my-1 py-0 tech" *ngFor="let item of item.project_technologies">
-                        {{item}}
-                    </div>
-
-
-                </div>
-                <a class="rounded-pill border px-1 my-1 py-1 src-code text-decoration-none" target="_blank"
-                    [href]="item.source_code">Src code</a>
-
-            </div>
+        <div *ngIf="!item.imgSrc" class="aegis-visual" aria-hidden="true">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>AegisIQ</span>
         </div>
-    </a>
+      </div>
 
+      <div class="project-content">
+        <div class="project-meta">
+          <span>{{item.project_type}}</span>
+          <time>{{item.developed_at}}</time>
+        </div>
+
+        <h3>{{item.project_title}}</h3>
+        <p class="project-subtitle">{{item.project_subtitle}}</p>
+        <p class="description">{{item.description}}</p>
+
+        <ul>
+          <li *ngFor="let highlight of item.highlights">{{highlight}}</li>
+        </ul>
+
+        <div class="technologies">
+          <span *ngFor="let technology of item.project_technologies">{{technology}}</span>
+        </div>
+
+        <div class="project-links" *ngIf="item.live_link || item.source_code">
+          <a *ngIf="item.live_link" [href]="item.live_link" target="_blank" rel="noopener noreferrer">
+            Live project <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+          <a *ngIf="item.source_code" [href]="item.source_code" target="_blank" rel="noopener noreferrer">
+            Source code <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
 </section>

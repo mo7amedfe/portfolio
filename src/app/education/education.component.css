@@ -1,71 +1,77 @@
- .duration {
-     color: rgba(95, 210, 212, 00.7);
-     transition: all 0.2s ease-in-out;
-
- }
-
-h4{
-    transition: all 0.2s ease-in-out;
-
-}
-i{
-    transition: all 0.2s ease-in-out;
-
-}
- .item-hover {
-     color: rgba(29, 29, 29, 0.1);
-     transition: all 0.2s ease-in-out;
- }
-
- .item-hover .duration {
-     color: rgba(95, 210, 212, 0.1);
-     transition: all 0.2s ease-in-out;
-
-
- }
- .item-hover i {
-    color: rgba(148, 163, 184,0.1) ;
-    
- }
- .item-hover h4 {
-    color: rgba(148, 163, 184,0.1) ;
-    
- }
-
- .item {
-     color: rgb(210, 210, 210);
-     transition: all 0.2s ease-in-out;
-
- }
-
- .item:hover {
-     color: rgb(255, 255, 255);
-     padding: 20px 0;
-
- }
-
- .item:hover .duration {
-     color: rgba(95, 210, 212);
-
- }
- .item:hover i {
-    color: rgba(95, 210, 212);
-
-}
-.item:hover h4 {
-    color: rgb(255, 255, 255);
-
+.education-list {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: rgba(15, 23, 42, 0.34);
 }
 
- @media (max-width:1023px)and (min-width:0) {
-     .item i {
-         font-size: 3em;
-     }
+.education-item {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1rem;
+  padding: 1.4rem;
+  border-bottom: 1px solid var(--border);
+  transition: background-color 180ms ease;
+}
 
-     h4 {
-        font-size: 20px;
-     }
-     .col-md-10{
-        padding: 0 15px;
-     }
- }
+.education-item:last-child {
+  border-bottom: 0;
+}
+
+.education-item:hover {
+  background: var(--surface);
+}
+
+.education-icon {
+  display: flex;
+  width: 2.6rem;
+  height: 2.6rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.8rem;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.education-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.education-heading span {
+  flex: 0 0 auto;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+p {
+  margin: 0.25rem 0 0;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 540px) {
+  .education-item {
+    grid-template-columns: 2.5rem 1fr;
+    padding: 1.15rem;
+  }
+
+  .education-heading {
+    display: block;
+  }
+
+  .education-heading span {
+    display: inline-block;
+    margin-top: 0.35rem;
+  }
+}

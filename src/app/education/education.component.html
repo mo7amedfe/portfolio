@@ -1,54 +1,44 @@
-<section id="Education" class="pb-lg-5">
+<section id="Education" aria-labelledby="education-title">
+  <h2 id="education-title" class="section-kicker">Education</h2>
 
-    <div id="nav-edu" class="navs-sm">
-        <h2>Education</h2>
-    </div>
-    <div class="">
-    
-        <div class="row">
-    
-            <div (mouseenter)="hover()" (mouseleave)="unhover()" [ngClass]="{'item-hover': isHovered}"
-                class="item w-100 d-flex border-bottom py-2">
-                <div class="col-md-2 d-flex justify-content-center align-items-center">
-    
-                    <i class="fa-solid fa-building-columns fa-4x text-center"></i>
-    
-                </div>
-                <div class="col-md-10">
-                    <h4>Studied Computer Science at Faculty of Science, Cairo University.
-                        <span class="duration">2021-2025</span>
-                    </h4>
-                </div>
-            </div>
-            <div (mouseenter)="hover()" (mouseleave)="unhover()" [ngClass]="{'item-hover': isHovered}"
-                class="item item-hover w-100 d-flex border-bottom py-2">
-                <div class="col-md-2 d-flex justify-content-center align-items-center">
-    
-                    <i class="fa-solid fa-code fa-4x text-center"></i>
-    
-                </div>
-                <div class="col-md-10">
-                    <h4>Frontend Development deploma at ROUTE. <span class="duration">2022</span>
-                    </h4>
-                </div>
-                
-            </div>
-               <div (mouseenter)="hover()" (mouseleave)="unhover()" [ngClass]="{'item-hover': isHovered}"
-                class="item item-hover w-100 d-flex border-bottom py-2">
-                <div class="col-md-2 d-flex justify-content-center align-items-center">
-
-                    <i class="fa-solid fa-database fa-4x text-center"></i>
-
-                </div>
-                <div class="col-md-10">
-                    <h4>Fundamentals of Node.Js, Express.Js and MongoDb at MaharaTech. <span class="duration">2025</span>
-                    </h4>
-                </div>
-                
-            </div>
-    
-    
-    
+  <div class="education-list">
+    <article class="education-item">
+      <div class="education-icon" aria-hidden="true">
+        <i class="fa-solid fa-building-columns"></i>
+      </div>
+      <div>
+        <div class="education-heading">
+          <h3>Bachelor’s Degree in Computer Science</h3>
+          <span>2022 - 2026</span>
         </div>
-    </div>
+        <p>Faculty of Science, Cairo University</p>
+      </div>
+    </article>
+
+    <article class="education-item">
+      <div class="education-icon" aria-hidden="true">
+        <i class="fa-solid fa-code"></i>
+      </div>
+      <div>
+        <div class="education-heading">
+          <h3>Frontend Web Development Diploma</h3>
+          <span>2022</span>
+        </div>
+        <p>Route</p>
+      </div>
+    </article>
+
+    <article class="education-item">
+      <div class="education-icon" aria-hidden="true">
+        <i class="fa-solid fa-database"></i>
+      </div>
+      <div>
+        <div class="education-heading">
+          <h3>Fundamentals of Node.js, Express.js and MongoDB</h3>
+          <span>2024</span>
+        </div>
+        <p>MaharaTech</p>
+      </div>
+    </article>
+  </div>
 </section>

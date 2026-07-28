@@ -1,78 +1,84 @@
-.icon {
-    color: white;
-    transition: color 0.2s ease-in-out;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.75rem;
 }
 
-.title {
-    transition: color 0.2s ease-in-out;
-    padding-bottom: 0;
-    margin-bottom: 1%;
-}
-.image{
-    filter: none;
-    transition: filter 0.2s ease-in-out;
-}
-.margin1{
-    margin-top:2%;
-}
-.skill{
-    height: 100px;
-    transition: all 0.2s ease-in-out;
-}
-.skill:hover{
-    box-shadow: 1px 1px 10px 1px rgba(47, 47, 47, 0.268);
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 10px 60px;
-}
-.icon{
-    transition: top 0.2s ease-in-out;
-}
-.skill:hover .icon{
-    top: 10px !important;
-}
-.skill:hover i {
-    color: #5fd2d4;
-
+.skill {
+  display: flex;
+  min-height: 6.6rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  background: rgba(15, 23, 42, 0.32);
+  text-align: center;
+  transition: border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
 }
 
-.skill:hover .title {
-    color: #ffffff;
+.skill i,
+.letter-icon {
+  color: #e2e8f0;
+  font-size: 1.8rem;
+  line-height: 1;
+  transition: color 180ms ease;
 }
 
-.skill:hover #mySVG path {
-    fill: #5fd2d4;
-}
-#mySVG path {
-    fill:white;
-    transition: fill 0.2s ease-in-out;
-}
-  
-.skill:hover #mySVG2 path {
-    fill: #5fd2d4;
-}
-#mySVG2 path {
-    fill:white;
-    transition: fill 0.2s ease-in-out;
+.letter-icon {
+  font-family: var(--font-mono);
+  font-weight: 800;
 }
 
-.skill-hovered i{
-color: rgba(0, 0, 0, 0.2) ;
+.letter-icon.express {
+  font-size: 1.25rem;
+  letter-spacing: -0.08em;
 }
-  .skill-hovered p{
-color: rgba(0, 0, 0, 0.2) ;
 
+.skill-title {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.skill:hover {
+  border-color: rgba(95, 210, 212, 0.38);
+  background: var(--surface);
+  transform: translateY(-2px);
+}
+
+.skill:hover i,
+.skill:hover .letter-icon {
+  color: var(--accent);
+}
+
+.supporting-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+}
+
+.supporting-skills span {
+  padding: 0.38rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+}
+
+@media (max-width: 1100px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  .skill-hovered #mySVG path{
-    fill: rgba(0, 0, 0, 0.2);
+}
 
+@media (max-width: 420px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  .skill-hovered #mySVG2 path{
-    fill: rgba(0, 0, 0, 0.2);
-
-  }
-  @media (max-width:768px)and (min-width:0) {
-    .col-md-1{
-        width: 21%;
-    }
 }

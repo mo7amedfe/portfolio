@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -9,63 +9,59 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class NavComponent {
   items = [
-    { name: 'ABOUT', active: false },
+    { name: 'About', active: false },
     { name: 'Education', active: false },
     { name: 'Skills', active: false },
     { name: 'Experience', active: false },
     { name: 'Projects', active: false },
   ];
-  activeSection: string = 'ABOUT';
 
+  activeSection = 'About';
   notificationVisible = false;
-  notificationTimeout: any;
 
-  activate(item: any) {
-    this.items.forEach((i) => (i.active = false));
+  activate(item: { name: string; active: boolean }) {
+    this.items.forEach((navItem) => (navItem.active = false));
     item.active = true;
     this.activeSection = item.name;
   }
 
   @HostListener('window:scroll', [])
   onScroll() {
-    const scrollPosition =window.pageYOffset ||document.documentElement.scrollTop ||document.body.scrollTop;
-    const navSm = document.getElementById('navs-sm');
+    const scrollPosition =
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop;
 
-    for (let item of this.items) {
+    for (const item of this.items) {
       const sectionElement = document.getElementById(item.name);
-      if (sectionElement) {
-        const sectionTop =sectionElement.getBoundingClientRect().top + window.scrollY;
-        const sectionHeight = sectionElement.offsetHeight;
 
-        if (scrollPosition >= sectionTop - 50 && scrollPosition < sectionTop + sectionHeight - 50) {
-          this.activeSection = item.name;
-
-          if (navSm) {
-            navSm.classList.add('show');
-            navSm.classList.remove('hide');
-          }
-
-          this.items.forEach((i) => (i.active = i.name === item.name));
-          break;
-        }
+      if (!sectionElement) {
+        continue;
       }
-      if (item.name === 'ABOUT') {
-        if (navSm) {
-          navSm.classList.add('hide');
-          navSm.classList.remove('show');
-        }
+
+      const sectionTop =
+        sectionElement.getBoundingClientRect().top + window.scrollY;
+      const sectionHeight = sectionElement.offsetHeight;
+
+      if (
+        scrollPosition >= sectionTop - 120 &&
+        scrollPosition < sectionTop + sectionHeight - 120
+      ) {
+        this.activeSection = item.name;
+        this.items.forEach(
+          (navItem) => (navItem.active = navItem.name === item.name)
+        );
+        break;
       }
     }
   }
 
   copyMail() {
-    navigator.clipboard.writeText('mohamed2233631@gmail.com')
-      
-      this.notificationVisible = true;
- 
+    navigator.clipboard.writeText('mohamed2233631@gmail.com');
+    this.notificationVisible = true;
+
     setTimeout(() => {
       this.notificationVisible = false;
-      
     }, 3000);
   }
 }

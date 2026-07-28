@@ -1,60 +1,55 @@
-<div class="nav" id="nav">
-
+<div class="profile-nav" id="nav">
   <div class="info">
-    <h1 class="text-light">Mohamed Ahmed</h1>
-    <h4 class="text-light">Software Engineer</h4>
-    <p class="text-white-50">I design and build scalable, high-quality software solutions for the web.</p>
+    <p class="eyebrow">Frontend · Backend · Cross-platform</p>
+    <h1>Mohamed Ahmed</h1>
+    <h2>Full-Stack Software Engineer</h2>
+    <p class="intro">I build thoughtful web and mobile products from interface to API.</p>
+
+    <div class="primary-actions" aria-label="Primary links">
+      <a class="primary-link" href="#Projects">View projects</a>
+      <a class="secondary-link"
+        href="https://drive.google.com/file/d/1MJjANAlk4aNzzzrWPFS05Lg_sSS9qYgJ/view?usp=sharing" target="_blank"
+        rel="noopener noreferrer">View résumé</a>
+    </div>
   </div>
 
-  <div class="navs">
+  <nav class="navs" aria-label="Portfolio sections">
     <ul>
-      <li class="d-flex align-items-center list" [ngClass]="{'activated': activeSection === item.name}"
+      <li class="list" [ngClass]="{'activated': activeSection === item.name}"
         (click)="activate(item)" *ngFor="let item of items">
-        <a [href]="'#' + item.name" class="link d-flex">
-          <div class="d-flex align-items-center">
-            <div class="line "></div>
-          </div>
-          <div>
-            {{item.name}}
-          </div>
+        <a [href]="'#' + item.name" class="link">
+          <span class="line" aria-hidden="true"></span>
+          <span>{{item.name}}</span>
         </a>
       </li>
     </ul>
-  </div>
+  </nav>
 
-  <div class="icons w-100 d-flex flex-wrap px-3 py-3">
-
-    <a href="https://www.linkedin.com/in/mohamed-ahmed-8074aa321/" target="_blank">
-      <div class="icon mx-2">
-        <i class="fa-brands fa-linkedin fa-xl"></i>
-      </div>
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/mohameddahmed1" target="_blank" rel="noopener noreferrer"
+      aria-label="LinkedIn profile">
+      <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
     </a>
-    <a (click)="copyMail()">
-      <div class="icon mx-2">
-        <i class="fa-solid fa-envelope-open-text fa-xl"></i>
-      </div>
+    <button type="button" (click)="copyMail()" aria-label="Copy email address">
+      <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+    </button>
+    <a href="https://github.com/mohamedsalah-2003" target="_blank" rel="noopener noreferrer"
+      aria-label="GitHub profile">
+      <i class="fa-brands fa-github" aria-hidden="true"></i>
     </a>
-    <a href="https://github.com/mohamedsalah-2003" target="_blank">
-      <div class="icon mx-2">
-        <i class="fa-brands fa-github fa-xl"></i>
-      </div>
+    <a href="https://www.youtube.com/@MDCodz" target="_blank" rel="noopener noreferrer"
+      aria-label="YouTube channel">
+      <i class="fa-brands fa-youtube" aria-hidden="true"></i>
     </a>
-  </div>
-</div>
-
-<div id="navs-sm" class="container-fluid navs-sm position-fixed w-100"
-  [ngClass]="{'show': activeSection !== 'ABOUT', 'hide': activeSection === 'ABOUT'}">
-  <div class="row position-relative w-100">
-    <div class="container-fluid">
-      <h2 id="activated-sm" class="activated-sm position-absolute"
-        [ngClass]="{'left-auto': activeSection === item.name}" *ngFor="let item of items">
-        {{activeSection}}
-      </h2>
-    </div>
   </div>
 </div>
 
-<div [ngClass]="{'visible':notificationVisible}" class="notification-container">
+<div id="navs-sm" class="mobile-section-indicator"
+  [ngClass]="{'show': activeSection !== 'About', 'hide': activeSection === 'About'}" aria-live="polite">
+  <span>{{activeSection}}</span>
+</div>
+
+<div [ngClass]="{'visible': notificationVisible}" class="notification-container" role="status" aria-live="polite">
   <div class="notification">
     <span>Copied:</span> mohamed2233631&#64;gmail.com
   </div>

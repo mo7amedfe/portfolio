@@ -10,20 +10,15 @@ import { Component } from '@angular/core';
 export class ExperienceComponent {
   items = [
     {
-      "duration": "2022-present",
-      "job_title": "Frontend or Full Stack web developer",
-      "description": "FreeLance jobs",
-      "job_requirements_technologies": ["Angular", "React", "MongoDB", "ExpressJS", "NodeJS"]
-
+      duration: 'Jul 2023 - Present',
+      job_title: 'Full-Stack Engineer',
+      context: 'Freelance Projects',
+      highlights: [
+        'Translate project needs into use cases, system requirements, and clear technical plans.',
+        'Design and implement database schemas and application architecture for maintainable products.',
+        'Build responsive interfaces, REST APIs, and structured documentation across the project lifecycle.'
+      ],
+      technologies: ['Angular', 'React', 'Node.js', 'Express.js', 'MongoDB']
     }
-  ]
-  isHovered: boolean = false
-  hover() {
-
-    this.isHovered = true
-  }
-  leave() {
-    this.isHovered = false
-
-  }
+  ];
 }

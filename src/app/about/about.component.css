@@ -1,40 +1,23 @@
-p{
-    line-height: 3rem;
-    transition: all 0.2s ease-in-out;
+.about-copy {
+  display: grid;
+  gap: 1rem;
 }
 
-p:hover{
-    color: white;
-    padding: 30px 10px;
-}
-p:hover  span{
-    color: rgba(95, 210, 212);
-
-
+p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.85;
 }
 
-.item-hovered{
-    color: rgba(0, 0, 0, 0.3);
-}
-.item-hovered span{
-    color: rgba(95, 210, 212, 0.3);
-
-}
-span{
-    color: rgba(95, 210, 212, 0.7);
-
-}
-h2{
-    display: none;
-}
-@media (min-width:0px) and (max-width:767px)  {
-h2{
-    display: block;
-    padding-left:8px ;
-    
-}
-.About{
-    padding: 20px 0;
+span {
+  color: #cbd5e1;
+  font-weight: 600;
 }
 
+@media (max-width: 767px) {
+  p {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
 }

@@ -11,7 +11,7 @@
   gap: 1rem;
   padding: 1.4rem;
   border-bottom: 1px solid var(--border);
-  transition: background-color 180ms ease;
+  transition: background-color 180ms ease, transform 180ms ease;
 }
 
 .education-item:last-child {
@@ -20,6 +20,7 @@
 
 .education-item:hover {
   background: var(--surface);
+  transform: translateX(0.35rem);
 }
 
 .education-icon {
@@ -31,6 +32,13 @@
   border-radius: 0.8rem;
   background: var(--accent-soft);
   color: var(--accent);
+  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.education-item:hover .education-icon {
+  background: var(--accent);
+  color: #082f36;
+  transform: rotate(-4deg) scale(1.04);
 }
 
 .education-heading {

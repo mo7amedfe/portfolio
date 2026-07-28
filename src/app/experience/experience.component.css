@@ -6,12 +6,18 @@
   border: 1px solid var(--border);
   border-radius: 1rem;
   background: rgba(15, 23, 42, 0.34);
-  transition: border-color 180ms ease, background-color 180ms ease;
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
 .experience-card:hover {
   border-color: rgba(95, 210, 212, 0.3);
   background: var(--surface);
+  box-shadow: 0 18px 38px rgba(2, 6, 23, 0.22);
+  transform: translateY(-3px);
 }
 
 .experience-date,
@@ -29,6 +35,11 @@ h3 {
   margin: 0.25rem 0 0.8rem;
   color: var(--text);
   font-size: 1.15rem;
+  transition: color 180ms ease;
+}
+
+.experience-card:hover h3 {
+  color: var(--accent);
 }
 
 ul {

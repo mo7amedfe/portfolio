@@ -47,12 +47,19 @@
 .skill:hover {
   border-color: rgba(95, 210, 212, 0.38);
   background: var(--surface);
-  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(2, 6, 23, 0.2);
+  transform: translateY(-4px);
 }
 
 .skill:hover i,
 .skill:hover .letter-icon {
   color: var(--accent);
+  transform: scale(1.08);
+}
+
+.skill i,
+.letter-icon {
+  transition: color 180ms ease, transform 180ms ease;
 }
 
 .supporting-skills {

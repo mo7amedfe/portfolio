@@ -1,19 +1,19 @@
 .profile-nav {
   display: flex;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   flex-direction: column;
 }
 
 h1 {
-  max-width: 10ch;
   margin: 0;
   color: #f8fafc;
   font-family: var(--font-mono);
-  font-size: clamp(2.45rem, 4vw, 3.4rem);
+  font-size: clamp(2.35rem, 3.8vw, 3.15rem);
   font-weight: 750;
   line-height: 1.05;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.07em;
+  white-space: nowrap;
 }
 
 h2 {
@@ -80,9 +80,8 @@ h2 {
 }
 
 .navs {
-  margin-top: auto;
-  margin-bottom: auto;
-  padding: 2rem 0;
+  margin: auto 0;
+  padding: clamp(1.25rem, 4vh, 2rem) 0;
 }
 
 .navs ul {
@@ -130,6 +129,7 @@ h2 {
 .social-links {
   display: flex;
   gap: 0.7rem;
+  padding-bottom: 0.25rem;
 }
 
 .social-links a,
@@ -190,14 +190,14 @@ h2 {
   top: 1.25rem;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   .profile-nav {
     height: auto;
+    min-height: 0;
   }
 
   h1 {
-    max-width: none;
-    font-size: clamp(2.35rem, 12vw, 3.25rem);
+    font-size: clamp(2.15rem, 9vw, 3rem);
   }
 
   h2 {
@@ -234,5 +234,38 @@ h2 {
 
   .mobile-section-indicator.show {
     top: 0;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+  h1 {
+    font-size: clamp(2rem, 3.4vw, 2.5rem);
+  }
+
+  h2 {
+    font-size: 1.05rem;
+  }
+
+  .intro {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 901px) and (max-height: 820px) {
+  .eyebrow {
+    margin-bottom: 0.65rem;
+  }
+
+  h2,
+  .intro {
+    margin-top: 0.65rem;
+  }
+
+  .primary-actions {
+    margin-top: 1rem;
+  }
+
+  .list {
+    margin: 0.45rem 0;
   }
 }

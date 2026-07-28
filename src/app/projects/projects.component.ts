@@ -27,8 +27,7 @@ export class ProjectsComponent {
         'Socket.IO',
         'FCM',
         'IoT'
-      ],
-      featured: true
+      ]
     },
     {
       source_code: 'https://github.com/mohamedsalah-2003/EducationPlatform',

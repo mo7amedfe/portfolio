@@ -10,12 +10,12 @@
   position: sticky;
   top: 0;
   height: 100vh;
-  padding: 5.5rem 0 3rem;
+  padding: clamp(2.5rem, 7vh, 5rem) 0 clamp(1.5rem, 3vh, 2.5rem);
 }
 
 .content {
   min-width: 0;
-  padding: 5.5rem 0 2.5rem;
+  padding: clamp(2.5rem, 7vh, 5rem) 0 2.5rem;
 }
 
 .content > * {
@@ -38,7 +38,7 @@ footer {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   .portfolio-shell {
     display: block;
     width: min(100% - 2rem, 640px);
@@ -56,5 +56,16 @@ footer {
 
   .content > * {
     margin-bottom: 4.5rem;
+  }
+}
+
+@media (min-width: 901px) and (max-height: 820px) {
+  .sidebar,
+  .content {
+    padding-top: 2rem;
+  }
+
+  .sidebar {
+    padding-bottom: 1.25rem;
   }
 }

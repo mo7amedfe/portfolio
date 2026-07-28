@@ -92,7 +92,7 @@ p {
   color: #fff;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   html {
     scroll-padding-top: 4.5rem;
   }

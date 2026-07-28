@@ -18,18 +18,14 @@
 .project-card:focus-within {
   border-color: rgba(95, 210, 212, 0.35);
   background: var(--surface);
-  transform: translateY(-2px);
-}
-
-.project-card.featured {
-  border-color: rgba(95, 210, 212, 0.3);
-  background:
-    linear-gradient(135deg, rgba(95, 210, 212, 0.08), rgba(30, 41, 59, 0.28)),
-    rgba(15, 23, 42, 0.34);
+  box-shadow: 0 18px 38px rgba(2, 6, 23, 0.22);
+  transform: translateY(-4px);
 }
 
 .project-media {
   min-width: 0;
+  overflow: hidden;
+  border-radius: 0.75rem;
 }
 
 .project-media img,
@@ -41,6 +37,12 @@
   border-radius: 0.75rem;
   object-fit: cover;
   object-position: top;
+  transition: filter 220ms ease, transform 220ms ease;
+}
+
+.project-card:hover .project-media img {
+  filter: brightness(1.08);
+  transform: scale(1.035);
 }
 
 .aegis-visual {
@@ -89,6 +91,12 @@ h3 {
   color: #f8fafc;
   font-size: 1.22rem;
   line-height: 1.35;
+  transition: color 180ms ease;
+}
+
+.project-card:hover h3,
+.project-card:focus-within h3 {
+  color: var(--accent);
 }
 
 .project-subtitle {
@@ -152,10 +160,12 @@ li::marker {
   font-size: 0.72rem;
   font-weight: 700;
   text-decoration: none;
+  transition: color 180ms ease, transform 180ms ease;
 }
 
 .project-links a:hover {
   color: var(--accent);
+  transform: translateX(0.2rem);
 }
 
 @media (max-width: 1100px) {

@@ -1,23 +1,56 @@
 .about-copy {
   display: grid;
-  gap: 1rem;
+  gap: 0.45rem;
 }
 
 p {
-  margin: 0;
+  margin: 0 0 0 -0.8rem;
+  padding: 0.7rem 0.8rem;
+  border-left: 2px solid transparent;
+  border-radius: 0.55rem;
   color: var(--muted);
   font-size: 1.02rem;
-  line-height: 1.85;
+  line-height: 2;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.about-copy:hover p:not(:hover) {
+  opacity: 0.26;
+}
+
+p:hover {
+  border-left-color: var(--accent);
+  background: linear-gradient(90deg, rgba(95, 210, 212, 0.08), transparent 78%);
+  color: #f8fafc;
+  transform: translateX(0.45rem);
+}
+
+p:hover span {
+  color: var(--accent);
 }
 
 span {
   color: #cbd5e1;
   font-weight: 600;
+  transition: color 180ms ease;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   p {
+    margin-left: -0.5rem;
+    padding: 0.6rem 0.5rem;
     font-size: 0.98rem;
-    line-height: 1.75;
+    line-height: 1.85;
+  }
+}
+
+@media (hover: none) {
+  .about-copy:hover p:not(:hover) {
+    opacity: 1;
   }
 }

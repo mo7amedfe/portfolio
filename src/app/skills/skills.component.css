@@ -42,6 +42,7 @@
   font-family: var(--font-mono);
   font-size: 0.7rem;
   font-weight: 700;
+  transition: color 180ms ease;
 }
 
 .skill:hover {
@@ -55,6 +56,10 @@
 .skill:hover .letter-icon {
   color: var(--accent);
   transform: scale(1.08);
+}
+
+.skill:hover .skill-title {
+  color: var(--accent);
 }
 
 .skill i,

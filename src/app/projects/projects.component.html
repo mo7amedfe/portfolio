@@ -31,12 +31,16 @@
           <span *ngFor="let technology of item.project_technologies">{{technology}}</span>
         </div>
 
-        <div class="project-links" *ngIf="item.live_link || item.source_code">
+        <div class="project-links" *ngIf="item.live_link || item.post_link || item.source_codes.length">
           <a *ngIf="item.live_link" [href]="item.live_link" target="_blank" rel="noopener noreferrer">
             Live project <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
           </a>
-          <a *ngIf="item.source_code" [href]="item.source_code" target="_blank" rel="noopener noreferrer">
-            Source code <i class="fa-brands fa-github" aria-hidden="true"></i>
+          <a *ngIf="item.post_link" [href]="item.post_link" target="_blank" rel="noopener noreferrer">
+            Project post <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+          <a *ngFor="let source of item.source_codes" [href]="source.url" target="_blank"
+            rel="noopener noreferrer">
+            {{source.label}} <i class="fa-brands fa-github" aria-hidden="true"></i>
           </a>
         </div>
       </div>

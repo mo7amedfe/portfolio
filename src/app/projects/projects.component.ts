@@ -11,26 +11,54 @@ export class ProjectsComponent {
   items = [
     {
       project_title: 'AegisIQ',
-      project_subtitle: 'Smart Home Safety Platform',
+      project_subtitle: 'AI-Powered Smart Home Safety Platform',
       project_type: 'Graduation Project',
       developed_at: 'Feb 2025 - Jun 2026',
       description:
-        'An AI-powered smart home platform that monitors IoT sensor data, detects abnormal events, supports face-recognition security, and delivers real-time alerts through a mobile application.',
+        'An AI-powered smart home safety platform combining IoT, computer vision, real-time communication, and mobile technologies to detect fire, gas and water leaks, intrusion, abnormal power consumption, and unauthorized access, then deliver instant alerts and actionable insights.',
       highlights: [
-        'Led system architecture and data modeling while building Dashboard, Alerts, and Analytics modules.',
-        'Built FCM and Socket.IO communication plus a Sensor & Camera Simulator for IoT testing.',
-        'Awarded 2nd place in the CS department and selected for a hackathon.'
+        'Led a six-engineer team, contributing to system architecture, key technical decisions, and MongoDB database design and data modeling.',
+        'Developed the Dashboard, Alerts, and Analytics modules end to end; built mobile authentication and FCM/Socket.IO real-time communication.',
+        'Designed the Sensor & Camera Simulator for realistic IoT and face-recognition testing; earned 2nd place faculty-wide and a hackathon nomination.'
       ],
       project_technologies: [
         'React Native',
         'Node.js',
+        'Express.js',
+        'MongoDB',
         'Socket.IO',
         'FCM',
+        'Computer Vision',
         'IoT'
+      ],
+      post_link:
+        'https://www.linkedin.com/posts/mohameddahmed1_hackathon-activity-7481765322652475392-XlT_',
+      source_codes: [
+        {
+          label: 'Mobile app source',
+          url: 'https://github.com/mohamedsalah-2003/AegisIQ-SmartHomeEndUserApp'
+        },
+        {
+          label: 'Backend source',
+          url: 'https://github.com/MustafaDols/Smart-Home-API'
+        },
+        {
+          label: 'Simulator source',
+          url: 'https://github.com/mohamedsalah-2003/AegisIQ-CameraAndSensorSemulatorApp'
+        },
+        {
+          label: 'AI service source',
+          url: 'https://github.com/Abdelrahmanyehia98/smart-home-anomaly-detection-ai'
+        }
       ]
     },
     {
-      source_code: 'https://github.com/mohamedsalah-2003/EducationPlatform',
+      source_codes: [
+        {
+          label: 'Source code',
+          url: 'https://github.com/mohamedsalah-2003/EducationPlatform'
+        }
+      ],
       live_link: 'https://education-platform-omega.vercel.app',
       imgSrc: 'assets/images/Screenshot 2025-07-03 164804.png',
       developed_at: 'Mar 2025 - Jun 2025',
@@ -54,7 +82,12 @@ export class ProjectsComponent {
       ]
     },
     {
-      source_code: 'https://github.com/mohamedsalah-2003/Realstate',
+      source_codes: [
+        {
+          label: 'Source code',
+          url: 'https://github.com/mohamedsalah-2003/Realstate'
+        }
+      ],
       live_link: 'https://mohamedsalah-2003.github.io/Realstate',
       imgSrc: 'assets/images/download.png',
       developed_at: 'Nov 2023 - Dec 2023',

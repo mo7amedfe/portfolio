@@ -4,9 +4,11 @@
   <div class="experience-list">
     <article class="experience-card" *ngFor="let item of items">
       <div class="experience-content">
-        <div class="experience-date">{{item.duration}}</div>
-        <p class="context">{{item.context}}</p>
-        <h3>{{item.job_title}}</h3>
+        <div class="experience-date">
+          <span class="duration">{{item.duration}}</span>
+          <p class="context">{{item.context}}</p>
+          <h3>{{item.job_title}}</h3>
+        </div>
 
         <ul>
           <li *ngFor="let highlight of item.highlights">{{highlight}}</li>

@@ -34,7 +34,7 @@
   flex-direction: column;
 }
 
-.experience-date,
+.duration,
 .context {
   margin: 0;
   color: var(--accent);
@@ -46,6 +46,13 @@
 }
 
 .experience-date {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 0.8rem;
+}
+
+.duration {
   margin-bottom: 0.3rem;
 }
 
@@ -54,7 +61,7 @@
 }
 
 h3 {
-  margin: 0 0 0.8rem;
+  margin: 0;
   color: var(--text);
   font-size: 1.15rem;
   transition: color 180ms ease;

@@ -55,30 +55,38 @@ export class ProjectsComponent {
     {
       source_codes: [
         {
-          label: 'Source code',
+          label: 'Frontend source',
           url: 'https://github.com/mohamedsalah-2003/EducationPlatform'
+        },
+        {
+          label: 'Backend & ERD',
+          url: 'https://github.com/mohamedsalah-2003/EducationPlatformBackEnd'
         }
       ],
       live_link: 'https://education-platform-omega.vercel.app',
       imgSrc: 'assets/images/Screenshot 2025-07-03 164804.png',
       developed_at: 'Mar 2025 - Jun 2025',
-      project_title: 'E-Learning Platform',
-      project_subtitle: 'Full end-to-end learning experience',
-      project_type: 'Demo / Freelance',
+      project_title: 'GenC Education Platform',
+      project_subtitle: 'Secure learning and payment platform',
+      project_type: 'Full-Stack Project',
       description:
-        'A complete MEAN-stack learning platform with course management, video lessons, quizzes, student workflows, instructor feedback, and a full administration dashboard.',
+        'A production-oriented learning management system connecting students, instructors, and administrators through course discovery, schedules, video lessons, assignments, testing, grading, feedback, and secure Stripe enrollment.',
       highlights: [
-        'Handled design, development, database structure, and deployment.',
-        'Built modular Angular interfaces for students, instructors, and administrators.',
-        'Focused on scalable architecture and maintainable application structure.'
+        'Built responsive role-specific experiences with Angular 19, RxJS, Bootstrap, reactive forms, and signed Cloudinary video uploads.',
+        'Implemented revocable JWT authentication, role- and resource-based authorization, login throttling, rate limits, structured logging, health checks, and automated tests.',
+        'Engineered exactly-once enrollment with verified Stripe webhooks, idempotency keys, distributed MongoDB locks, TTL expiry, unique constraints, and atomic transactions.'
       ],
       project_technologies: [
-        'Angular',
-        'TypeScript',
-        'Tailwind CSS',
+        'Angular 19',
+        'RxJS',
+        'Bootstrap',
+        'JavaScript',
         'Node.js',
         'Express.js',
-        'MongoDB'
+        'MongoDB',
+        'Mongoose',
+        'Stripe',
+        'Cloudinary'
       ]
     },
     {

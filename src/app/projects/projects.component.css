@@ -18,6 +18,19 @@
     transform 180ms ease;
 }
 
+.project-card:hover .description {
+  color: #fff;
+}
+
+.project-card:hover li::marker {
+  color: var(--accent);
+}
+
+.project-card:hover li {
+  color: #fff;
+
+}
+
 .projects-list:hover .project-card:not(:hover) {
   opacity: 0.26;
 }
@@ -47,7 +60,14 @@
   object-position: top;
   transition: filter 220ms ease, transform 220ms ease;
 }
+.project-titles {
+  margin-top: 2rem;
+}
+.contentcontainer{
+  margin-top: 0.75rem;
+  /* margin-bottom: 0.75rem; */
 
+}
 .project-card:hover .project-media img {
   filter: brightness(1.08);
   transform: scale(1.035);
@@ -90,7 +110,7 @@
 }
 
 .project-meta time {
-  color: var(--muted);
+  color: var(--accent);
   text-align: right;
 }
 
@@ -119,6 +139,7 @@ h3 {
   color: var(--muted);
   font-size: 0.9rem;
   line-height: 1.7;
+  transition: color 180ms ease;
 }
 
 ul {
@@ -131,8 +152,15 @@ ul {
   line-height: 1.6;
 }
 
+li {
+  transition: color 180ms ease;
+
+}
+
 li::marker {
-  color: var(--accent);
+  color: #fff;
+  transition: color 180ms ease;
+
 }
 
 .technologies {

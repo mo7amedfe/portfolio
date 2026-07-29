@@ -16,12 +16,15 @@
 }
 
 html {
+  background-color: var(--bg);
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
 }
 
 body {
   min-width: 320px;
+  min-height: 100vh;
+  min-height: 100dvh;
   margin: 0;
   background: var(--bg);
   color: var(--text);
@@ -49,6 +52,8 @@ p {
   position: fixed;
   inset: 0;
   z-index: -5;
+  min-height: 100vh;
+  min-height: 100dvh;
   overflow: hidden;
   background:
     linear-gradient(180deg, rgba(15, 23, 42, 0.72), var(--bg)),
@@ -57,13 +62,13 @@ p {
 
 .spotlight {
   position: absolute;
+  z-index: -4;
   width: 760px;
   height: 760px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(30, 64, 175, 0.24) 0%, rgba(15, 23, 42, 0) 68%);
   pointer-events: none;
   transform: translate(-50%, -50%);
-  z-index: -4;
 }
 
 .section-kicker {

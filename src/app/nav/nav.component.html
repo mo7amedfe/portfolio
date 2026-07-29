@@ -44,9 +44,21 @@
   </div>
 </div>
 
-<div id="navs-sm" class="mobile-section-indicator"
-  [ngClass]="{'show': activeSection !== 'About', 'hide': activeSection === 'About'}" aria-live="polite">
-  <span>{{activeSection}}</span>
+<div
+  id="navs-sm"
+  class="navs-sm navs-sm--glass-bar navs-sm--water-drop"
+  [ngClass]="{ show: activeSection !== 'About', hide: activeSection === 'About' }"
+  aria-live="polite"
+>
+  <div class="navs-sm__safe">
+    <div class="navs-sm__glass">
+      <div class="navs-sm__glass-inner">
+        <div class="navs-sm__title-clip">
+          <h2 class="navs-sm__title" [@sectionTitle]="titleMotionState">{{ activeSection }}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div [ngClass]="{'visible': notificationVisible}" class="notification-container" role="status" aria-live="polite">

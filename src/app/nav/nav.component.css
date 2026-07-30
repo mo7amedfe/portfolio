@@ -171,109 +171,105 @@ h2 {
 }
 
 .navs-sm__safe {
+  width: min(100%, 34rem);
+  margin: 0 auto;
   padding: max(12px, env(safe-area-inset-top))
     max(16px, env(safe-area-inset-right)) 10px
     max(16px, env(safe-area-inset-left));
 }
 
-.navs-sm--water-drop {
-  --drop-blur: 24px;
-  --drop-saturation: 1.45;
-}
-
-.navs-sm__glass {
+.navs-sm__panel {
   position: relative;
+  display: grid;
+  min-height: 4.5rem;
+  grid-template-columns: 4px minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: 1rem;
   overflow: hidden;
-  padding: 1.5px;
-  border-radius: 30px;
-  isolation: isolate;
-  background: rgba(255, 255, 255, 0.08);
+  padding: 0.8rem 1rem 0.85rem 0;
+  border: 1px solid #263552;
+  border-radius: 18px;
+  background: #0c1629;
   box-shadow:
-    0 8px 30px rgba(0, 0, 0, 0.22),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    0 12px 28px rgba(2, 6, 23, 0.36),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
   opacity: 0;
-  transform: translateY(-14px) scale(0.96);
+  transform: translateY(-12px);
   transition:
-    opacity 450ms cubic-bezier(0.32, 0.72, 0, 1),
-    transform 550ms cubic-bezier(0.32, 0.72, 0, 1);
+    opacity 320ms ease,
+    transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.navs-sm__glass-inner {
-  position: relative;
-  overflow: hidden;
-  padding: 15px 22px 17px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 28px;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.12),
-    rgba(255, 255, 255, 0.03)
-  );
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.18),
-    inset 0 -12px 24px rgba(0, 0, 0, 0.16);
-  backdrop-filter: blur(var(--drop-blur)) saturate(var(--drop-saturation));
-  -webkit-backdrop-filter: blur(var(--drop-blur)) saturate(var(--drop-saturation));
+.navs-sm__accent {
+  width: 4px;
+  height: 2.65rem;
+  border-radius: 0 4px 4px 0;
+  background: var(--accent);
+  box-shadow: 0 0 16px rgba(95, 210, 212, 0.28);
 }
 
-.navs-sm__glass::before {
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.12),
-    rgba(255, 255, 255, 0.04) 10%,
-    transparent 30%
-  );
-  content: "";
-  opacity: 0.25;
-  pointer-events: none;
+.navs-sm__copy {
+  min-width: 0;
 }
 
-.navs-sm__glass::after {
-  position: absolute;
-  right: 10%;
-  bottom: -30px;
-  left: 10%;
-  height: 60px;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(120, 180, 255, 0.16),
-    transparent 70%
-  );
-  content: "";
-  filter: blur(18px);
-  pointer-events: none;
+.navs-sm__eyebrow {
+  display: block;
+  margin-bottom: 0.22rem;
+  color: #71819e;
+  font-family: var(--font-mono);
+  font-size: 0.57rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .navs-sm__title-clip {
-  position: relative;
-  z-index: 1;
   min-height: 1.35em;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .navs-sm__title {
   margin: 0;
-  color: rgba(255, 255, 255, 0.98);
-  font-size: 1.15rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  color: #f8fafc;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.015em;
   line-height: 1.2;
-  text-align: center;
-  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
   transform-origin: center;
 }
 
-.navs-sm--glass-bar.show .navs-sm__glass {
-  opacity: 1;
-  transform: translateY(0) scale(1);
+.navs-sm__steps {
+  display: flex;
+  align-items: center;
+  gap: 0.28rem;
 }
 
-.navs-sm--glass-bar.hide .navs-sm__glass {
+.navs-sm__steps span {
+  width: 0.32rem;
+  height: 0.32rem;
+  border-radius: 50%;
+  background: #3a4862;
+  transition:
+    width 220ms ease,
+    border-radius 220ms ease,
+    background-color 220ms ease;
+}
+
+.navs-sm__steps span.is-active {
+  width: 1rem;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.navs-sm--solid-bar.show .navs-sm__panel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navs-sm--solid-bar.hide .navs-sm__panel {
   opacity: 0;
-  transform: translateY(-12px) scale(0.97);
+  transform: translateY(-10px);
 }
 
 .notification-container {
@@ -377,7 +373,8 @@ h2 {
 
 @media (prefers-reduced-motion: reduce) {
   .navs-sm,
-  .navs-sm__glass {
+  .navs-sm__panel,
+  .navs-sm__steps span {
     transition-duration: 0.01ms !important;
   }
 }

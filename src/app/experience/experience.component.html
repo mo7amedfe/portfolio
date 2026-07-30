@@ -3,12 +3,15 @@
 
   <div class="experience-list">
     <article class="experience-card" *ngFor="let item of items">
+
+
+      <span class="timeline-dot" aria-hidden="true"></span>
+      <div class="experience-date">
+        <span class="duration">{{item.duration}}</span>
+      </div>
       <div class="experience-content">
-        <div class="experience-date">
-          <p class="context">{{item.context}}</p>
-          <span class="duration">{{item.duration}}</span>
-        </div>
-        <h3 class="my-3">{{item.job_title}}</h3>
+        <p class="context">{{item.context}}</p>
+        <h3>{{item.job_title}}</h3>
 
         <ul>
           <li *ngFor="let highlight of item.highlights">{{highlight}}</li>

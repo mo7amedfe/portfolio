@@ -46,16 +46,26 @@
 
 <div
   id="navs-sm"
-  class="navs-sm navs-sm--glass-bar navs-sm--water-drop"
+  class="navs-sm navs-sm--solid-bar"
   [ngClass]="{ show: activeSection !== 'About', hide: activeSection === 'About' }"
   aria-live="polite"
 >
   <div class="navs-sm__safe">
-    <div class="navs-sm__glass">
-      <div class="navs-sm__glass-inner">
+    <div class="navs-sm__panel">
+      <span class="navs-sm__accent" aria-hidden="true"></span>
+
+      <div class="navs-sm__copy">
+        <span class="navs-sm__eyebrow">Currently viewing</span>
         <div class="navs-sm__title-clip">
           <h2 class="navs-sm__title" [@sectionTitle]="titleMotionState">{{ activeSection }}</h2>
         </div>
+      </div>
+
+      <div class="navs-sm__steps" aria-hidden="true">
+        <span
+          *ngFor="let item of items"
+          [class.is-active]="item.name === activeSection"
+        ></span>
       </div>
     </div>
   </div>
